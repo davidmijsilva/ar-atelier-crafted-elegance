@@ -10,7 +10,9 @@ import { Hand, Sparkles, Ruler } from "lucide-react";
 import logoCircular from "@/assets/logo-circular.asset.json";
 import testemunho1 from "@/assets/testemunho1.jpeg.asset.json";
 import testemunho2 from "@/assets/testemunho2.jpeg.asset.json";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
+import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
+import lembrancaEducadora from "@/assets/lembranca-educadora.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 import { site } from "@/lib/site";
 
