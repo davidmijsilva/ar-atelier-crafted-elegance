@@ -3,8 +3,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
 import jardimSuculentasTopo from "@/assets/jardim-suculentas-topo.jpeg.asset.json";
 import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
-import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
-import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
 import velasConchaDetalhe from "@/assets/velas-concha-detalhe.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 
@@ -41,14 +39,9 @@ const pecas = [
     alt: "Vista de topo do jardim de suculentas em cera",
   },
   {
-    nome: "Bouquet de Rosas",
-    src: bouquetRosas.url,
-    alt: "Bouquet de velas em forma de rosas vermelhas num vaso coração",
-  },
-  {
     nome: "Esculturas em Cera",
-    src: velasConchaDuo.url,
-    alt: "Velas escultóricas em forma de concha",
+    src: velasConchaDetalhe.url,
+    alt: "Detalhe do acabamento das velas escultóricas em forma de concha",
   },
 ];
 
@@ -65,7 +58,7 @@ function DecoracaoPage() {
       </Section>
 
       <Section className="border-t border-border">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pecas.map((peca) => (
             <article key={peca.nome}>
               <img
@@ -97,20 +90,12 @@ function DecoracaoPage() {
               Solicitar Orçamento de Design
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src={jardimSuculentasAmbiente.url}
-              alt="Jardim de suculentas em cera junto a plantas decorativas"
-              loading="lazy"
-              className="aspect-square w-full object-cover"
-            />
-            <img
-              src={velasConchaDetalhe.url}
-              alt="Detalhe do acabamento das velas em forma de concha"
-              loading="lazy"
-              className="aspect-square w-full object-cover"
-            />
-          </div>
+          <img
+            src={jardimSuculentasAmbiente.url}
+            alt="Jardim de suculentas em cera junto a plantas decorativas"
+            loading="lazy"
+            className="aspect-[4/3] w-full object-cover"
+          />
         </div>
       </Section>
     </>
