@@ -1,12 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
-import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
-import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
 import lembrancaEducadora from "@/assets/lembranca-educadora.jpeg.asset.json";
-import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
-import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
-import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section, SectionHeading } from "@/components/Section";
 
@@ -38,36 +33,13 @@ const ocasioes = [
     alt: "Bouquet de velas em forma de rosas e escultura de mãos dadas em gesso",
   },
   {
-    nome: "Batizados",
-    src: velaConchaAcesa.url,
-    alt: "Vela artesanal em forma de concha acesa",
-  },
-  {
-    nome: "Chás de Bebé",
-    src: chaRevelacao.url,
-    alt: "Vela de chá revelação em frasco de vidro com tampa de bambu",
-  },
-  {
-    nome: "Outras Celebrações",
+    nome: "Lembranças Personalizadas",
     src: lembrancaEducadora.url,
     alt: "Lembrança personalizada para educadora com vela em forma de margarida",
   },
 ];
 
-const portefolio = [
-  {
-    src: jardimSuculentas.url,
-    alt: "Jardim de suculentas em cera numa taça de cerâmica",
-  },
-  {
-    src: velasConchaDuo.url,
-    alt: "Duas velas em forma de concha apresentadas sobre livros",
-  },
-  {
-    src: jardimSuculentasAmbiente.url,
-    alt: "Jardim de suculentas em cera em ambiente decorado",
-  },
-];
+const outrasOcasioes = ["Batizados", "Chás de bebé", "Aniversários", "Datas comemorativas"];
 
 function EventosPage() {
   return (
@@ -82,7 +54,7 @@ function EventosPage() {
       </Section>
 
       <Section className="border-t border-border">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2">
           {ocasioes.map((o) => (
             <article key={o.nome}>
               <img
@@ -98,21 +70,14 @@ function EventosPage() {
       </Section>
 
       <Section className="border-t border-border">
-        <SectionHeading
-          eyebrow="Portefólio"
-          title="Apresentação e"
-          script="embalagem"
-          description="Alguns trabalhos criados no atelier, do conceito à apresentação final."
-        />
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {portefolio.map((img) => (
-            <img
-              key={img.src}
-              src={img.src}
-              alt={img.alt}
-              loading="lazy"
-              className="aspect-[4/3] w-full object-cover"
-            />
+        <div className="flex flex-wrap gap-3">
+          {outrasOcasioes.map((o) => (
+            <span
+              key={o}
+              className="border border-border px-4 py-2 text-[0.7rem] tracking-brand text-muted-foreground"
+            >
+              {o}
+            </span>
           ))}
         </div>
       </Section>

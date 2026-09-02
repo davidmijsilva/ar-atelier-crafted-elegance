@@ -3,9 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
 import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
 import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
-import velasConchaDetalhe from "@/assets/velas-concha-detalhe.jpeg.asset.json";
 import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
-import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 
 export const Route = createFileRoute("/velas")({
@@ -45,7 +43,6 @@ const grupos = [
     itens: ["Formas escultóricas", "Cores à medida", "Peças únicas"],
     imagens: [
       { src: velasConchaDuo.url, alt: "Duas velas decorativas em forma de concha sobre livros" },
-      { src: velasConchaDetalhe.url, alt: "Detalhe das velas de concha em cera creme" },
     ],
   },
   {
@@ -54,7 +51,6 @@ const grupos = [
     itens: ["Edições limitadas", "Embalagem de oferta", "Conjuntos"],
     imagens: [
       { src: bouquetRosas.url, alt: "Bouquet de velas em forma de rosas num vaso coração preto" },
-      { src: jardimSuculentasAmbiente.url, alt: "Jardim de suculentas em cera junto a plantas decorativas" },
     ],
   },
 ];
