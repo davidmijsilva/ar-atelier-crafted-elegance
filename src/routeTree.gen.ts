@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactosRouteImport } from './routes/contactos'
 import { Route as DecoracaoRouteImport } from './routes/decoracao'
 import { Route as EventosRouteImport } from './routes/eventos'
+import { Route as PoliticaPrivacidadeRouteImport } from './routes/politica-privacidade'
 import { Route as SobreNosRouteImport } from './routes/sobre-nos'
 import { Route as VelasRouteImport } from './routes/velas'
 
@@ -36,6 +37,11 @@ const EventosRoute = EventosRouteImport.update({
   path: '/eventos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliticaPrivacidadeRoute = PoliticaPrivacidadeRouteImport.update({
+  id: '/politica-privacidade',
+  path: '/politica-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreNosRoute = SobreNosRouteImport.update({
   id: '/sobre-nos',
   path: '/sobre-nos',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/contactos': typeof ContactosRoute
   '/decoracao': typeof DecoracaoRoute
   '/eventos': typeof EventosRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
   '/sobre-nos': typeof SobreNosRoute
   '/velas': typeof VelasRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/contactos': typeof ContactosRoute
   '/decoracao': typeof DecoracaoRoute
   '/eventos': typeof EventosRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
   '/sobre-nos': typeof SobreNosRoute
   '/velas': typeof VelasRoute
 }
@@ -69,21 +77,36 @@ export interface FileRoutesById {
   '/contactos': typeof ContactosRoute
   '/decoracao': typeof DecoracaoRoute
   '/eventos': typeof EventosRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
   '/sobre-nos': typeof SobreNosRoute
   '/velas': typeof VelasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/contactos' | '/decoracao' | '/eventos' | '/sobre-nos' | '/velas'
+    | '/'
+    | '/contactos'
+    | '/decoracao'
+    | '/eventos'
+    | '/politica-privacidade'
+    | '/sobre-nos'
+    | '/velas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contactos' | '/decoracao' | '/eventos' | '/sobre-nos' | '/velas'
+  to:
+    | '/'
+    | '/contactos'
+    | '/decoracao'
+    | '/eventos'
+    | '/politica-privacidade'
+    | '/sobre-nos'
+    | '/velas'
   id:
     | '__root__'
     | '/'
     | '/contactos'
     | '/decoracao'
     | '/eventos'
+    | '/politica-privacidade'
     | '/sobre-nos'
     | '/velas'
   fileRoutesById: FileRoutesById
@@ -93,6 +116,7 @@ export interface RootRouteChildren {
   ContactosRoute: typeof ContactosRoute
   DecoracaoRoute: typeof DecoracaoRoute
   EventosRoute: typeof EventosRoute
+  PoliticaPrivacidadeRoute: typeof PoliticaPrivacidadeRoute
   SobreNosRoute: typeof SobreNosRoute
   VelasRoute: typeof VelasRoute
 }
@@ -127,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EventosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politica-privacidade': {
+      id: '/politica-privacidade'
+      path: '/politica-privacidade'
+      fullPath: '/politica-privacidade'
+      preLoaderRoute: typeof PoliticaPrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre-nos': {
       id: '/sobre-nos'
       path: '/sobre-nos'
@@ -149,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactosRoute: ContactosRoute,
   DecoracaoRoute: DecoracaoRoute,
   EventosRoute: EventosRoute,
+  PoliticaPrivacidadeRoute: PoliticaPrivacidadeRoute,
   SobreNosRoute: SobreNosRoute,
   VelasRoute: VelasRoute,
 }
