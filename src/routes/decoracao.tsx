@@ -67,9 +67,14 @@ function DecoracaoPage() {
       <Section className="border-t border-border">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {pecas.map((peca) => (
-            <article key={peca}>
-              <ImagePlaceholder label={peca} />
-              <h2 className="mt-4 font-serif text-xl">{peca}</h2>
+            <article key={peca.nome}>
+              <img
+                src={peca.src}
+                alt={peca.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <h2 className="mt-4 font-serif text-xl">{peca.nome}</h2>
             </article>
           ))}
         </div>
