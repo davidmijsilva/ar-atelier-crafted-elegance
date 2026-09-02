@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import bouquetAniversario from "@/assets/bouquet-aniversario.jpeg.asset.json";
 import velaLimao from "@/assets/vela-limao.jpeg.asset.json";
 import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
 import velaBorboletas from "@/assets/vela-borboletas.jpeg.asset.json";
@@ -36,7 +35,6 @@ const grupos = [
     itens: ["Aroma à escolha", "Cera vegetal", "Rótulo personalizado"],
     imagens: [
       { src: velaLimao.url, alt: "Vela aromática de limão em recipiente de cerâmica com etiqueta AR Candle Studio" },
-      { src: bouquetAniversario.url, alt: "Vela aromática em bouquet floral de aniversário" },
     ],
   },
   {
