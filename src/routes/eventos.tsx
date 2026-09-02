@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
 import lembrancaCasamento from "@/assets/lembranca-casamento-mesa.jpeg.asset.json";
 import lembrancaBatizado from "@/assets/lembranca-batizado-mao.jpeg.asset.json";
-import lembrancaChaBebe from "@/assets/lembranca-cha-bebe.jpeg.asset.json";
 import lembrancaKraft from "@/assets/lembranca-detalhe-kraft.jpeg.asset.json";
 import lembrancaEmbalada from "@/assets/lembranca-embalada.jpeg.asset.json";
 import embalamentoCaixa from "@/assets/embalamento-caixa.jpeg.asset.json";
@@ -43,9 +43,9 @@ const ocasioes = [
     alt: "Lembrança personalizada de batizado em tons de rosa com vela",
   },
   {
-    nome: "Chás de Bebé",
-    src: lembrancaChaBebe.url,
-    alt: "Bouquet de velas para chá de bebé com ursinho e flores em tons pastel",
+    nome: "Chás de Bebé e Revelação",
+    src: chaRevelacao.url,
+    alt: "Vela personalizada para chá de revelação de bebé em frasco de vidro com rótulo",
   },
   {
     nome: "Lembranças Personalizadas",
