@@ -54,9 +54,9 @@ const ocasioes = [
     alt: "Vela decorativa de grávida com flores em tons rosa, ideal para anunciar ou celebrar uma gravidez",
   },
   {
-    nome: "Lembranças Personalizadas",
-    src: lembrancaKraft.url,
-    alt: "Lembrança personalizada com etiqueta kraft, flores secas e vela",
+    nome: "Dia da Mãe",
+    src: bouquetDiaMae.url,
+    alt: "Bouquet de velas florais em tons cinza, rosa e branco, ideal para oferecer no Dia da Mãe",
   },
 ];
 
