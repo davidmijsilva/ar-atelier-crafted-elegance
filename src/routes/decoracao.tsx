@@ -4,6 +4,9 @@ import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
 import jardimSuculentasTopo from "@/assets/jardim-suculentas-topo.jpeg.asset.json";
 import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
 import velasConchaDetalhe from "@/assets/velas-concha-detalhe.jpeg.asset.json";
+import bouquetAzul from "@/assets/bouquet-azul.jpeg.asset.json";
+import bouquetLacoRosa from "@/assets/bouquet-laco-rosa.jpeg.asset.json";
+import bouquetCesto from "@/assets/bouquet-cesto.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 
 export const Route = createFileRoute("/decoracao")({
@@ -42,6 +45,21 @@ const pecas = [
     nome: "Esculturas em Cera",
     src: velasConchaDetalhe.url,
     alt: "Detalhe do acabamento das velas escultóricas em forma de concha",
+  },
+  {
+    nome: "Bouquet Floral Azul",
+    src: bouquetAzul.url,
+    alt: "Bouquet de velas em tons de azul pálido com margaridas, rosas e conchas",
+  },
+  {
+    nome: "Bouquet com Laço",
+    src: bouquetLacoRosa.url,
+    alt: "Bouquet de velas florais em tons rosa e creme com laço branco",
+  },
+  {
+    nome: "Cesto de Flores",
+    src: bouquetCesto.url,
+    alt: "Cesto com bouquet de velas florais em tons pastel visto de cima",
   },
 ];
 

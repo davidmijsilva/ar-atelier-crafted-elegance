@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
-import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
+import velaLimao from "@/assets/vela-limao.jpeg.asset.json";
 import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
-import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
+import velaBorboletas from "@/assets/vela-borboletas.jpeg.asset.json";
+import bouquetPascoa from "@/assets/bouquet-pascoa.jpeg.asset.json";
+import velaCereal from "@/assets/vela-cereal.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 
 export const Route = createFileRoute("/velas")({
@@ -33,8 +35,8 @@ const grupos = [
     text: "Cera vegetal e aromas escolhidos consigo. Pode personalizar o aroma, a cor, o recipiente e o rótulo.",
     itens: ["Aroma à escolha", "Cera vegetal", "Rótulo personalizado"],
     imagens: [
-      { src: chaRevelacao.url, alt: "Vela aromática em frasco de vidro com tampa de bambu e rótulo AR atelier" },
-      { src: velaConchaAcesa.url, alt: "Vela em forma de concha acesa" },
+      { src: chaRevelacao.url, alt: "Vela aromática em frasco de vidro com tampa de bambu e rótulo personalizado" },
+      { src: velaLimao.url, alt: "Vela aromática de limão em recipiente de cerâmica com etiqueta AR Candle Studio" },
     ],
   },
   {
@@ -43,6 +45,7 @@ const grupos = [
     itens: ["Formas escultóricas", "Cores à medida", "Peças únicas"],
     imagens: [
       { src: velasConchaDuo.url, alt: "Duas velas decorativas em forma de concha sobre livros" },
+      { src: velaBorboletas.url, alt: "Vela de duas mechas com borboletas em relevo num vaso rosa em forma de flor" },
     ],
   },
   {
@@ -50,7 +53,8 @@ const grupos = [
     text: "Edições limitadas criadas para épocas especiais do ano e datas comemorativas.",
     itens: ["Edições limitadas", "Embalagem de oferta", "Conjuntos"],
     imagens: [
-      { src: bouquetRosas.url, alt: "Bouquet de velas em forma de rosas num vaso coração preto" },
+      { src: bouquetPascoa.url, alt: "Bouquet de velas de Páscoa com coelhinhos, ovos e flores" },
+      { src: velaCereal.url, alt: "Velas em forma de argolas de cereais coloridas numa chávena amarela" },
     ],
   },
 ];
