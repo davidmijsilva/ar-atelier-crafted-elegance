@@ -2,11 +2,11 @@ export const site = {
   name: "AR atelier",
   tagline: "Criar. Experimentar. Dar vida. A todas as ideias.",
   email: "arhandmadecandles@gmail.com",
-  phone: "962 107 278",
-  phoneHref: "tel:+351918363976",
-  whatsapp: "+351 962 106 278",
+  phone: "962107278",
+  phoneHref: "tel:+351962107278",
+  whatsapp: "+351 962107278",
   whatsappHref:
-    "https://wa.me/351962106278?text=" +
+    "https://wa.me/351962107278?text=" +
     encodeURIComponent("Olá! Gostaria de pedir um orçamento ao AR atelier."),
   instagram: "aratelier.pt",
   instagramHref: "https://instagram.com/aratelier.pt",

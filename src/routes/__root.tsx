@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "Criação artesanal de velas, peças decorativas e lembranças personalizadas para eventos.",
           email: "arhandmadecandles@gmail.com",
-          telephone: "+351918363976",
+          telephone: "+351962107278",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Lisboa",
