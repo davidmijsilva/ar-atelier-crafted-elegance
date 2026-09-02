@@ -43,16 +43,22 @@ const destaques = [
     title: "Velas Aromáticas",
     text: "Cera vegetal e aromas selecionados, em recipientes escolhidos peça a peça.",
     to: "/velas" as const,
+    image: velaConchaAcesa.url,
+    alt: "Vela artesanal em forma de concha acesa num prato de vidro",
   },
   {
     title: "Peça Decorativa Personalizada",
     text: "Formas, cores e acabamentos pensados para o seu espaço.",
     to: "/decoracao" as const,
+    image: jardimSuculentas.url,
+    alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica",
   },
   {
     title: "Lembranças de Evento",
     text: "Detalhes que ficam na memória dos seus convidados.",
     to: "/eventos" as const,
+    image: lembrancaEducadora.url,
+    alt: "Lembrança personalizada para educadora com vela em forma de flor",
   },
 ];
 
