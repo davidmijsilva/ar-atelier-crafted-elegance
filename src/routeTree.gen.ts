@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DecoracaoRouteImport } from './routes/decoracao'
+import { Route as EventosRouteImport } from './routes/eventos'
 import { Route as VelasRouteImport } from './routes/velas'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const DecoracaoRoute = DecoracaoRouteImport.update({
   path: '/decoracao',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EventosRoute = EventosRouteImport.update({
+  id: '/eventos',
+  path: '/eventos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VelasRoute = VelasRouteImport.update({
   id: '/velas',
   path: '/velas',
@@ -32,30 +38,34 @@ const VelasRoute = VelasRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/decoracao': typeof DecoracaoRoute
+  '/eventos': typeof EventosRoute
   '/velas': typeof VelasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/decoracao': typeof DecoracaoRoute
+  '/eventos': typeof EventosRoute
   '/velas': typeof VelasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/decoracao': typeof DecoracaoRoute
+  '/eventos': typeof EventosRoute
   '/velas': typeof VelasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/decoracao' | '/velas'
+  fullPaths: '/' | '/decoracao' | '/eventos' | '/velas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/decoracao' | '/velas'
-  id: '__root__' | '/' | '/decoracao' | '/velas'
+  to: '/' | '/decoracao' | '/eventos' | '/velas'
+  id: '__root__' | '/' | '/decoracao' | '/eventos' | '/velas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DecoracaoRoute: typeof DecoracaoRoute
+  EventosRoute: typeof EventosRoute
   VelasRoute: typeof VelasRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DecoracaoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/eventos': {
+      id: '/eventos'
+      path: '/eventos'
+      fullPath: '/eventos'
+      preLoaderRoute: typeof EventosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/velas': {
       id: '/velas'
       path: '/velas'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DecoracaoRoute: DecoracaoRoute,
+  EventosRoute: EventosRoute,
   VelasRoute: VelasRoute,
 }
 export const routeTree = rootRouteImport
