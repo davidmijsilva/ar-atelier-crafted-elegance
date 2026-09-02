@@ -110,7 +110,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           telephone: "+351918363976",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Rua das Terras Compridas n2 rc A",
             addressLocality: "Lisboa",
             addressCountry: "PT",
           },
