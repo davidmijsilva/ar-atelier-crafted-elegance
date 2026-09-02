@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
+import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
+import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
+import lembrancaEducadora from "@/assets/lembranca-educadora.jpeg.asset.json";
+import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
+import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
+import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section, SectionHeading } from "@/components/Section";
 
