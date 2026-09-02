@@ -70,7 +70,7 @@ function ContactosPage() {
           <div className="flex items-start gap-3">
             <MapPin className="mt-1 size-4 shrink-0 text-gold" />
             <div>
-              <p className="text-[0.68rem] tracking-brand text-muted-foreground">Morada fiscal</p>
+              <p className="text-[0.68rem] tracking-brand text-muted-foreground">MORADA</p>
               <p className="text-sm">{site.address}</p>
             </div>
           </div>
