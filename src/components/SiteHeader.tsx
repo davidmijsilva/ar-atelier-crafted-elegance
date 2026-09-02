@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 import logoCircular from "@/assets/logo-circular.asset.json";
-import { nav, site } from "@/lib/site";
+import { nav } from "@/lib/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
