@@ -54,7 +54,7 @@ const destaques = [
     alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica",
   },
   {
-    title: "Lembranças para Eventos",
+    title: "Lembranças",
     text: "Detalhes que ficam na memória dos seus convidados.",
     to: "/eventos" as const,
     image: lembrancaEducadora.url,
