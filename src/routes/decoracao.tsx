@@ -56,6 +56,11 @@ const pecas = [
     src: bouquetCesto.url,
     alt: "Cesto com bouquet de velas florais em tons pastel visto de cima",
   },
+  {
+    nome: "Vela My Last Nerve",
+    src: velaMyLastNerve.url,
+    alt: "Vela decorativa em jarra de vidro com etiqueta personalizada My Last Nerve",
+  },
 ];
 
 function DecoracaoPage() {
