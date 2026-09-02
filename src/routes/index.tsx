@@ -8,6 +8,8 @@ import {
 import { Hand, Sparkles, Ruler } from "lucide-react";
 
 import logoCircular from "@/assets/logo-circular.asset.json";
+import testemunho1 from "@/assets/testemunho1.jpeg.asset.json";
+import testemunho2 from "@/assets/testemunho2.jpeg.asset.json";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Section, SectionHeading } from "@/components/Section";
 import { site } from "@/lib/site";
