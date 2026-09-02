@@ -1,7 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
-import lembrancaEducadora from "@/assets/lembranca-educadora.jpeg.asset.json";
+import lembrancaCasamento from "@/assets/lembranca-casamento-mesa.jpeg.asset.json";
+import lembrancaBatizado from "@/assets/lembranca-batizado-mao.jpeg.asset.json";
+import lembrancaChaBebe from "@/assets/lembranca-cha-bebe.jpeg.asset.json";
+import lembrancaKraft from "@/assets/lembranca-detalhe-kraft.jpeg.asset.json";
+import lembrancaEmbalada from "@/assets/lembranca-embalada.jpeg.asset.json";
+import embalamentoCaixa from "@/assets/embalamento-caixa.jpeg.asset.json";
+import embalamentoEnvio from "@/assets/embalamento-envio.jpeg.asset.json";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section, SectionHeading } from "@/components/Section";
 
@@ -29,13 +34,41 @@ export const Route = createFileRoute("/eventos")({
 const ocasioes = [
   {
     nome: "Casamentos",
-    src: bouquetRosas.url,
-    alt: "Bouquet de velas em forma de rosas e escultura de mãos dadas em gesso",
+    src: lembrancaCasamento.url,
+    alt: "Lembrança personalizada com vela apresentada numa mesa de casamento",
+  },
+  {
+    nome: "Batizados",
+    src: lembrancaBatizado.url,
+    alt: "Lembrança personalizada de batizado em tons de rosa com vela",
+  },
+  {
+    nome: "Chás de Bebé",
+    src: lembrancaChaBebe.url,
+    alt: "Bouquet de velas para chá de bebé com ursinho e flores em tons pastel",
   },
   {
     nome: "Lembranças Personalizadas",
-    src: lembrancaEducadora.url,
-    alt: "Lembrança personalizada para educadora com vela em forma de margarida",
+    src: lembrancaKraft.url,
+    alt: "Lembrança personalizada com etiqueta kraft, flores secas e vela",
+  },
+];
+
+const embalamento = [
+  {
+    nome: "Lembranças Embaladas",
+    src: lembrancaEmbalada.url,
+    alt: "Lembranças com vela em forma de margarida embaladas individualmente com cartão personalizado",
+  },
+  {
+    nome: "Caixas de Apresentação",
+    src: embalamentoCaixa.url,
+    alt: "Bouquet de velas acondicionado em caixa de apresentação com instruções de segurança",
+  },
+  {
+    nome: "Envios Cuidados",
+    src: embalamentoEnvio.url,
+    alt: "Caixa de envio selada e sinalizada como frágil com a marca AR Candle Studio",
   },
 ];
 
@@ -54,8 +87,30 @@ function EventosPage() {
       </Section>
 
       <Section className="border-t border-border">
-        <div className="grid gap-8 sm:grid-cols-2">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {ocasioes.map((o) => (
+            <article key={o.nome}>
+              <img
+                src={o.src}
+                alt={o.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <h2 className="mt-4 font-serif text-xl">{o.nome}</h2>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="border-t border-border">
+        <SectionHeading
+          eyebrow="Embalamento"
+          title="Apresentação ao"
+          script="detalhe"
+          description="Cada lembrança sai embalada individualmente e protegida para chegar perfeita ao seu dia."
+        />
+        <div className="mt-12 grid gap-8 sm:grid-cols-3">
+          {embalamento.map((o) => (
             <article key={o.nome}>
               <img
                 src={o.src}
