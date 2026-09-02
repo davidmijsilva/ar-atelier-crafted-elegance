@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
 import lembrancaCasamento from "@/assets/lembranca-casamento-mesa.jpeg.asset.json";
 import lembrancaBatizado from "@/assets/lembranca-batizado-mao.jpeg.asset.json";
+import anuncioGravidez from "@/assets/anuncio-gravidez.jpeg.asset.json";
 import lembrancaKraft from "@/assets/lembranca-detalhe-kraft.jpeg.asset.json";
 import lembrancaEmbalada from "@/assets/lembranca-embalada.jpeg.asset.json";
 import embalamentoCaixa from "@/assets/embalamento-caixa.jpeg.asset.json";
@@ -48,6 +49,11 @@ const ocasioes = [
     alt: "Vela personalizada para chá de revelação de bebé em frasco de vidro com rótulo",
   },
   {
+    nome: "Anúncio de Gravidez",
+    src: anuncioGravidez.url,
+    alt: "Vela decorativa de grávida com flores em tons rosa, ideal para anunciar ou celebrar uma gravidez",
+  },
+  {
     nome: "Lembranças Personalizadas",
     src: lembrancaKraft.url,
     alt: "Lembrança personalizada com etiqueta kraft, flores secas e vela",
@@ -87,7 +93,7 @@ function EventosPage() {
       </Section>
 
       <Section className="border-t border-border">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {ocasioes.map((o) => (
             <article key={o.nome}>
               <img
