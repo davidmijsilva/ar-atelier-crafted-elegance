@@ -49,6 +49,11 @@ const ocasioes = [
     alt: "Vela personalizada para chá de revelação de bebé em frasco de vidro com rótulo",
   },
   {
+    nome: "Anúncio de Gravidez",
+    src: anuncioGravidez.url,
+    alt: "Vela decorativa de grávida com flores em tons rosa, ideal para anunciar ou celebrar uma gravidez",
+  },
+  {
     nome: "Lembranças Personalizadas",
     src: lembrancaKraft.url,
     alt: "Lembrança personalizada com etiqueta kraft, flores secas e vela",
