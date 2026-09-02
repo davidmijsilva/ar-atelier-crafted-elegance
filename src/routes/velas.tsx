@@ -43,6 +43,10 @@ const grupos = [
     title: "Velas Decorativas",
     text: "Formas escultóricas pensadas para decorar mesas, estantes e espaços de descanso.",
     itens: ["Formas escultóricas", "Cores à medida", "Peças únicas"],
+    imagens: [
+      { src: velasConchaDuo.url, alt: "Duas velas decorativas em forma de concha sobre livros" },
+      { src: velasConchaDetalhe.url, alt: "Detalhe das velas de concha em cera creme" },
+    ],
   },
   {
     title: "Coleções Sazonais",
