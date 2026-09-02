@@ -54,7 +54,7 @@ const destaques = [
     alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica",
   },
   {
-    title: "Lembranças de Evento",
+    title: "Lembranças para Eventos",
     text: "Detalhes que ficam na memória dos seus convidados.",
     to: "/eventos" as const,
     image: lembrancaEducadora.url,
@@ -94,7 +94,7 @@ const faq = [
     a: "Sim. Fazemos entregas em mãos na zona de Lisboa e envios para todo o país.",
   },
   {
-    q: "Aceitam encomendas grandes para eventos?",
+    q: "Aceitam encomendas grandes de lembranças para eventos?",
     a: "Sim. Trabalhamos regularmente lembranças para casamentos, batizados e chás de bebé. Diga-nos a data e a quantidade prevista para prepararmos uma proposta.",
   },
 ];

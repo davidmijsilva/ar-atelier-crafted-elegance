@@ -74,7 +74,7 @@ function EventosPage() {
     <>
       <Section className="pb-8">
         <SectionHeading
-          eyebrow="Eventos"
+          eyebrow="Lembranças"
           title="Lembranças que ficam na"
           script="memória"
           description="Criamos lembranças personalizadas para o seu dia, do conceito à embalagem final."
@@ -120,7 +120,7 @@ function EventosPage() {
       <Section className="border-t border-border">
         <div className="mx-auto max-w-2xl">
           <SectionHeading
-            eyebrow="Pedido para eventos"
+            eyebrow="Pedido para lembranças"
             title="Conte-nos sobre o seu"
             script="evento"
             description="Indique a data, o tipo de evento e a quantidade prevista. Respondemos com uma proposta personalizada."
@@ -128,8 +128,8 @@ function EventosPage() {
           <div className="mt-10">
             <QuoteForm
               variant="evento"
-              subject="Novo pedido de evento — Website AR atelier"
-              tipos={["Casamento", "Batizado", "Chá de bebé", "Aniversário", "Outro evento"]}
+              subject="Novo pedido de lembranças para evento — Website AR atelier"
+              tipos={["Casamento", "Batizado", "Chá de bebé", "Aniversário", "Outro"]}
             />
           </div>
         </div>
