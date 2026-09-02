@@ -44,7 +44,7 @@ const ocasioes = [
     alt: "Lembrança personalizada de batizado em tons de rosa com vela",
   },
   {
-    nome: "Chás de Bebé e Revelação",
+    nome: "Chás de Bebé e Revelação - Acende a vela e descobre",
     src: chaRevelacao.url,
     alt: "Vela personalizada para chá de revelação de bebé em frasco de vidro com rótulo",
   },
