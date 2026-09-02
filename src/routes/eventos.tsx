@@ -84,9 +84,14 @@ function EventosPage() {
       <Section className="border-t border-border">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ocasioes.map((o) => (
-            <article key={o}>
-              <ImagePlaceholder label={o} />
-              <h2 className="mt-4 font-serif text-xl">{o}</h2>
+            <article key={o.nome}>
+              <img
+                src={o.src}
+                alt={o.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <h2 className="mt-4 font-serif text-xl">{o.nome}</h2>
             </article>
           ))}
         </div>
@@ -97,11 +102,17 @@ function EventosPage() {
           eyebrow="Portefólio"
           title="Apresentação e"
           script="embalagem"
-          description="Espaço reservado para fotografias de eventos realizados pelo atelier."
+          description="Alguns trabalhos criados no atelier, do conceito à apresentação final."
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {["Mesa de lembranças", "Embalagem individual", "Etiquetas personalizadas"].map((l) => (
-            <ImagePlaceholder key={l} label={l} ratio="aspect-[4/3]" />
+          {portefolio.map((img) => (
+            <img
+              key={img.src}
+              src={img.src}
+              alt={img.alt}
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
           ))}
         </div>
       </Section>
