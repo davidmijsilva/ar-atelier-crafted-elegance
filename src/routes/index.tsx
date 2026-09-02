@@ -8,6 +8,8 @@ import {
 import { Hand, Sparkles, Ruler } from "lucide-react";
 
 import logoCircular from "@/assets/logo-circular.asset.json";
+import testemunho1 from "@/assets/testemunho1.jpeg.asset.json";
+import testemunho2 from "@/assets/testemunho2.jpeg.asset.json";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Section, SectionHeading } from "@/components/Section";
 import { site } from "@/lib/site";
@@ -178,17 +180,25 @@ function Home() {
           eyebrow="Testemunhos"
           title="O que dizem os nossos"
           script="clientes"
-          description="Esta secção está reservada para testemunhos reais de clientes, a inserir pelo atelier."
+          description="Palavras de quem já confiou no AR atelier para tornar momentos ainda mais especiais."
         />
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="flex min-h-40 items-center justify-center border border-dashed border-border bg-card p-6 text-center text-xs tracking-brand text-muted-foreground"
-            >
-              Testemunho a preencher
-            </div>
-          ))}
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <figure className="overflow-hidden rounded-sm border border-border bg-card p-2 shadow-sm">
+            <img
+              src={testemunho1.url}
+              alt="Testemunho de cliente: 'Adorei Ana, perfeito e com mto significado. Vou divulgar o teu trabalho.'"
+              className="w-full"
+              loading="lazy"
+            />
+          </figure>
+          <figure className="overflow-hidden rounded-sm border border-border bg-card p-2 shadow-sm">
+            <img
+              src={testemunho2.url}
+              alt="Testemunho de cliente: 'A minha mãe adorou! Gostou tanto que diz que nem vai queimar as velas porque são demasiado bonitas.'"
+              className="w-full"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </Section>
 
