@@ -52,6 +52,10 @@ const grupos = [
     title: "Coleções Sazonais",
     text: "Edições limitadas criadas para épocas especiais do ano e datas comemorativas.",
     itens: ["Edições limitadas", "Embalagem de oferta", "Conjuntos"],
+    imagens: [
+      { src: bouquetRosas.url, alt: "Bouquet de velas em forma de rosas num vaso coração preto" },
+      { src: jardimSuculentasAmbiente.url, alt: "Jardim de suculentas em cera junto a plantas decorativas" },
+    ],
   },
 ];
 
