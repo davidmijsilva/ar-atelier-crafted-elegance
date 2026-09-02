@@ -2,7 +2,7 @@ export const site = {
   name: "AR atelier",
   tagline: "Criar. Experimentar. Dar vida. A todas as ideias.",
   email: "arhandmadecandles@gmail.com",
-  phone: "918363976",
+  phone: "962 107 278",
   phoneHref: "tel:+351918363976",
   whatsapp: "+351 962 106 278",
   whatsappHref:
