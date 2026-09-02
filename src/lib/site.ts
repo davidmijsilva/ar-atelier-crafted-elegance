@@ -20,7 +20,7 @@ export const nav = [
   { to: "/", label: "Início" },
   { to: "/velas", label: "Velas" },
   { to: "/decoracao", label: "Peças Decorativas" },
-  { to: "/eventos", label: "Eventos" },
+  { to: "/eventos", label: "Lembranças" },
   { to: "/sobre-nos", label: "Sobre Nós" },
   { to: "/contactos", label: "Contactos" },
 ] as const;
