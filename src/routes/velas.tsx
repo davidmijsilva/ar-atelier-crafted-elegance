@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
+import bouquetAniversario from "@/assets/bouquet-aniversario.jpeg.asset.json";
 import velaLimao from "@/assets/vela-limao.jpeg.asset.json";
 import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
 import velaBorboletas from "@/assets/vela-borboletas.jpeg.asset.json";
@@ -35,8 +35,8 @@ const grupos = [
     text: "Cera vegetal e aromas escolhidos consigo. Pode personalizar o aroma, a cor, o recipiente e o rótulo.",
     itens: ["Aroma à escolha", "Cera vegetal", "Rótulo personalizado"],
     imagens: [
-      { src: chaRevelacao.url, alt: "Vela aromática em frasco de vidro com tampa de bambu e rótulo personalizado" },
       { src: velaLimao.url, alt: "Vela aromática de limão em recipiente de cerâmica com etiqueta AR Candle Studio" },
+      { src: bouquetAniversario.url, alt: "Vela aromática em bouquet floral de aniversário" },
     ],
   },
   {
