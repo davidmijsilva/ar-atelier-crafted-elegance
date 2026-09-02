@@ -98,8 +98,18 @@ function DecoracaoPage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <ImagePlaceholder label="Processo" ratio="aspect-square" />
-            <ImagePlaceholder label="Acabamento" ratio="aspect-square" />
+            <img
+              src={jardimSuculentasAmbiente.url}
+              alt="Jardim de suculentas em cera junto a plantas decorativas"
+              loading="lazy"
+              className="aspect-square w-full object-cover"
+            />
+            <img
+              src={velasConchaDetalhe.url}
+              alt="Detalhe do acabamento das velas em forma de concha"
+              loading="lazy"
+              className="aspect-square w-full object-cover"
+            />
           </div>
         </div>
       </Section>
