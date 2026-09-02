@@ -6,6 +6,7 @@ import velasConchaDetalhe from "@/assets/velas-concha-detalhe.jpeg.asset.json";
 import bouquetAzul from "@/assets/bouquet-azul.jpeg.asset.json";
 import bouquetLacoRosa from "@/assets/bouquet-laco-rosa.jpeg.asset.json";
 import bouquetCesto from "@/assets/bouquet-cesto.jpeg.asset.json";
+import velaMyLastNerve from "@/assets/vela-my-last-nerve.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 
 export const Route = createFileRoute("/decoracao")({
@@ -54,6 +55,11 @@ const pecas = [
     nome: "Cesto de Flores",
     src: bouquetCesto.url,
     alt: "Cesto com bouquet de velas florais em tons pastel visto de cima",
+  },
+  {
+    nome: "Vela My Last Nerve",
+    src: velaMyLastNerve.url,
+    alt: "Vela decorativa em jarra de vidro com etiqueta personalizada My Last Nerve",
   },
 ];
 
