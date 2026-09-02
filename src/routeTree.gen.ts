@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactosRouteImport } from './routes/contactos'
+import { Route as DecoracaoRouteImport } from './routes/decoracao'
+import { Route as EventosRouteImport } from './routes/eventos'
+import { Route as PoliticaPrivacidadeRouteImport } from './routes/politica-privacidade'
+import { Route as SobreNosRouteImport } from './routes/sobre-nos'
+import { Route as VelasRouteImport } from './routes/velas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactosRoute = ContactosRouteImport.update({
+  id: '/contactos',
+  path: '/contactos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DecoracaoRoute = DecoracaoRouteImport.update({
+  id: '/decoracao',
+  path: '/decoracao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventosRoute = EventosRouteImport.update({
+  id: '/eventos',
+  path: '/eventos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaPrivacidadeRoute = PoliticaPrivacidadeRouteImport.update({
+  id: '/politica-privacidade',
+  path: '/politica-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreNosRoute = SobreNosRouteImport.update({
+  id: '/sobre-nos',
+  path: '/sobre-nos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VelasRoute = VelasRouteImport.update({
+  id: '/velas',
+  path: '/velas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contactos': typeof ContactosRoute
+  '/decoracao': typeof DecoracaoRoute
+  '/eventos': typeof EventosRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
+  '/sobre-nos': typeof SobreNosRoute
+  '/velas': typeof VelasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contactos': typeof ContactosRoute
+  '/decoracao': typeof DecoracaoRoute
+  '/eventos': typeof EventosRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
+  '/sobre-nos': typeof SobreNosRoute
+  '/velas': typeof VelasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contactos': typeof ContactosRoute
+  '/decoracao': typeof DecoracaoRoute
+  '/eventos': typeof EventosRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
+  '/sobre-nos': typeof SobreNosRoute
+  '/velas': typeof VelasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contactos'
+    | '/decoracao'
+    | '/eventos'
+    | '/politica-privacidade'
+    | '/sobre-nos'
+    | '/velas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contactos'
+    | '/decoracao'
+    | '/eventos'
+    | '/politica-privacidade'
+    | '/sobre-nos'
+    | '/velas'
+  id:
+    | '__root__'
+    | '/'
+    | '/contactos'
+    | '/decoracao'
+    | '/eventos'
+    | '/politica-privacidade'
+    | '/sobre-nos'
+    | '/velas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactosRoute: typeof ContactosRoute
+  DecoracaoRoute: typeof DecoracaoRoute
+  EventosRoute: typeof EventosRoute
+  PoliticaPrivacidadeRoute: typeof PoliticaPrivacidadeRoute
+  SobreNosRoute: typeof SobreNosRoute
+  VelasRoute: typeof VelasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contactos': {
+      id: '/contactos'
+      path: '/contactos'
+      fullPath: '/contactos'
+      preLoaderRoute: typeof ContactosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/decoracao': {
+      id: '/decoracao'
+      path: '/decoracao'
+      fullPath: '/decoracao'
+      preLoaderRoute: typeof DecoracaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventos': {
+      id: '/eventos'
+      path: '/eventos'
+      fullPath: '/eventos'
+      preLoaderRoute: typeof EventosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-privacidade': {
+      id: '/politica-privacidade'
+      path: '/politica-privacidade'
+      fullPath: '/politica-privacidade'
+      preLoaderRoute: typeof PoliticaPrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre-nos': {
+      id: '/sobre-nos'
+      path: '/sobre-nos'
+      fullPath: '/sobre-nos'
+      preLoaderRoute: typeof SobreNosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/velas': {
+      id: '/velas'
+      path: '/velas'
+      fullPath: '/velas'
+      preLoaderRoute: typeof VelasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactosRoute: ContactosRoute,
+  DecoracaoRoute: DecoracaoRoute,
+  EventosRoute: EventosRoute,
+  PoliticaPrivacidadeRoute: PoliticaPrivacidadeRoute,
+  SobreNosRoute: SobreNosRoute,
+  VelasRoute: VelasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
