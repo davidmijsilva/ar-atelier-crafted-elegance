@@ -102,7 +102,7 @@ function EventosPage() {
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
-              <h2 className="mt-4 font-serif text-xl">{o.nome}</h2>
+              <h2 className="mt-4 text-center font-serif text-xl">{o.nome}</h2>
             </article>
           ))}
         </div>
@@ -124,7 +124,7 @@ function EventosPage() {
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
-              <h2 className="mt-4 font-serif text-xl">{o.nome}</h2>
+              <h2 className="mt-4 text-center font-serif text-xl">{o.nome}</h2>
             </article>
           ))}
         </div>
