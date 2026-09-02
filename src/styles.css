@@ -153,3 +153,27 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "liga" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 300;
+  }
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+}
+
+@utility tracking-brand {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
