@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
+import jardimSuculentasTopo from "@/assets/jardim-suculentas-topo.jpeg.asset.json";
+import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
+import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
+import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
+import velasConchaDetalhe from "@/assets/velas-concha-detalhe.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 
 export const Route = createFileRoute("/decoracao")({
