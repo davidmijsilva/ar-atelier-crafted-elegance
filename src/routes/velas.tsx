@@ -34,6 +34,10 @@ const grupos = [
     title: "Velas Aromáticas",
     text: "Cera vegetal e aromas escolhidos consigo. Pode personalizar o aroma, a cor, o recipiente e o rótulo.",
     itens: ["Aroma à escolha", "Cera vegetal", "Rótulo personalizado"],
+    imagens: [
+      { src: chaRevelacao.url, alt: "Vela aromática em frasco de vidro com tampa de bambu e rótulo AR atelier" },
+      { src: velaConchaAcesa.url, alt: "Vela em forma de concha acesa" },
+    ],
   },
   {
     title: "Velas Decorativas",
