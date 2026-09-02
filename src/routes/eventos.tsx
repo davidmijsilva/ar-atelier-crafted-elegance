@@ -25,7 +25,43 @@ export const Route = createFileRoute("/eventos")({
   component: EventosPage,
 });
 
-const ocasioes = ["Casamentos", "Batizados", "Chás de Bebé", "Outras Celebrações"];
+const ocasioes = [
+  {
+    nome: "Casamentos",
+    src: bouquetRosas.url,
+    alt: "Bouquet de velas em forma de rosas e escultura de mãos dadas em gesso",
+  },
+  {
+    nome: "Batizados",
+    src: velaConchaAcesa.url,
+    alt: "Vela artesanal em forma de concha acesa",
+  },
+  {
+    nome: "Chás de Bebé",
+    src: chaRevelacao.url,
+    alt: "Vela de chá revelação em frasco de vidro com tampa de bambu",
+  },
+  {
+    nome: "Outras Celebrações",
+    src: lembrancaEducadora.url,
+    alt: "Lembrança personalizada para educadora com vela em forma de margarida",
+  },
+];
+
+const portefolio = [
+  {
+    src: jardimSuculentas.url,
+    alt: "Jardim de suculentas em cera numa taça de cerâmica",
+  },
+  {
+    src: velasConchaDuo.url,
+    alt: "Duas velas em forma de concha apresentadas sobre livros",
+  },
+  {
+    src: jardimSuculentasAmbiente.url,
+    alt: "Jardim de suculentas em cera em ambiente decorado",
+  },
+];
 
 function EventosPage() {
   return (
