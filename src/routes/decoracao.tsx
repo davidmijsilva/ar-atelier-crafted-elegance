@@ -29,7 +29,28 @@ export const Route = createFileRoute("/decoracao")({
   component: DecoracaoPage,
 });
 
-const pecas = ["Vasos", "Bandejas", "Centros de Mesa", "Esculturas"];
+const pecas = [
+  {
+    nome: "Jardim de Suculentas",
+    src: jardimSuculentas.url,
+    alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica verde",
+  },
+  {
+    nome: "Centro de Mesa",
+    src: jardimSuculentasTopo.url,
+    alt: "Vista de topo do jardim de suculentas em cera",
+  },
+  {
+    nome: "Bouquet de Rosas",
+    src: bouquetRosas.url,
+    alt: "Bouquet de velas em forma de rosas vermelhas num vaso coração",
+  },
+  {
+    nome: "Esculturas em Cera",
+    src: velasConchaDuo.url,
+    alt: "Velas escultóricas em forma de concha",
+  },
+];
 
 function DecoracaoPage() {
   return (
