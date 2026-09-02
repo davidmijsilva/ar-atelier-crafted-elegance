@@ -4,7 +4,7 @@ import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
 import lembrancaCasamento from "@/assets/lembranca-casamento-mesa.jpeg.asset.json";
 import lembrancaBatizado from "@/assets/lembranca-batizado-mao.jpeg.asset.json";
 import anuncioGravidez from "@/assets/anuncio-gravidez.jpeg.asset.json";
-import lembrancaKraft from "@/assets/lembranca-detalhe-kraft.jpeg.asset.json";
+import bouquetDiaMae from "@/assets/bouquet-dia-mae.jpeg.asset.json";
 import lembrancaEmbalada from "@/assets/lembranca-embalada.jpeg.asset.json";
 import embalamentoCaixa from "@/assets/embalamento-caixa.jpeg.asset.json";
 import embalamentoEnvio from "@/assets/embalamento-envio.jpeg.asset.json";
