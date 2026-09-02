@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
-import jardimSuculentasTopo from "@/assets/jardim-suculentas-topo.jpeg.asset.json";
 import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
 import velasConchaDetalhe from "@/assets/velas-concha-detalhe.jpeg.asset.json";
 import bouquetAzul from "@/assets/bouquet-azul.jpeg.asset.json";
@@ -35,11 +34,6 @@ const pecas = [
     nome: "Jardim de Suculentas",
     src: jardimSuculentas.url,
     alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica verde",
-  },
-  {
-    nome: "Centro de Mesa",
-    src: jardimSuculentasTopo.url,
-    alt: "Vista de topo do jardim de suculentas em cera",
   },
   {
     nome: "Esculturas em Cera",
