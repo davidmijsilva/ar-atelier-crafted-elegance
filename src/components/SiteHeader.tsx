@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 import logoCircular from "@/assets/logo-circular.asset.json";
-import { nav, site } from "@/lib/site";
+import { nav } from "@/lib/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -38,14 +38,12 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <a
-            href={site.whatsappHref}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/contactos"
             className="border border-foreground px-4 py-2 text-[0.7rem] tracking-brand transition-colors hover:bg-foreground hover:text-background"
           >
             Pedir Orçamento
-          </a>
+          </Link>
         </nav>
 
         <button
