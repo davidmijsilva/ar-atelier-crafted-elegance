@@ -36,7 +36,7 @@ function PrivacidadePage() {
           <p className="mt-3">
             AR atelier
             <br />
-            Morada fiscal: {site.address}
+            Morada: {site.address}
             <br />
             NIF: {site.nif}
             <br />
