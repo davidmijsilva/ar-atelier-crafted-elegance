@@ -77,8 +77,15 @@ function VelasPage() {
             className={`grid items-center gap-10 md:grid-cols-2 ${index % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`}
           >
             <div className="grid grid-cols-2 gap-4">
-              <ImagePlaceholder label={grupo.title} />
-              <ImagePlaceholder label="Detalhe" className="mt-8" />
+              {grupo.imagens.map((img, i) => (
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className={`aspect-[3/4] w-full object-cover ${i === 1 ? "mt-8" : ""}`}
+                />
+              ))}
             </div>
             <div>
               <h2 className="font-serif text-3xl">{grupo.title}</h2>
