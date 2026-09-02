@@ -11,8 +11,8 @@ import logoCircular from "@/assets/logo-circular.asset.json";
 import testemunho1 from "@/assets/testemunho1.jpeg.asset.json";
 import testemunho2 from "@/assets/testemunho2.jpeg.asset.json";
 import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
-import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
-import lembrancaEducadora from "@/assets/lembranca-educadora.jpeg.asset.json";
+import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
+import lembrancaBatizado from "@/assets/lembranca-batizado-colecao.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 import { site } from "@/lib/site";
 
@@ -50,15 +50,15 @@ const destaques = [
     title: "Peça Decorativa Personalizada",
     text: "Formas, cores e acabamentos pensados para o seu espaço.",
     to: "/decoracao" as const,
-    image: jardimSuculentas.url,
-    alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica",
+    image: bouquetRosas.url,
+    alt: "Bouquet de velas em forma de rosas vermelhas num vaso coração preto",
   },
   {
     title: "Lembranças",
     text: "Detalhes que ficam na memória dos seus convidados.",
     to: "/eventos" as const,
-    image: lembrancaEducadora.url,
-    alt: "Lembrança personalizada para educadora com vela em forma de flor",
+    image: lembrancaBatizado.url,
+    alt: "Conjunto de lembranças personalizadas de batizado em tons de rosa",
   },
 ];
 
