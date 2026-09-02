@@ -157,7 +157,12 @@ function Home() {
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {destaques.map((item) => (
             <article key={item.title}>
-              <ImagePlaceholder label={item.title} />
+              <img
+                src={item.image}
+                alt={item.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
               <h3 className="mt-5 font-serif text-2xl">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
               <Link
