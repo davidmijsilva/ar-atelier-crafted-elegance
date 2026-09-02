@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
+import jardimSuculentasTopo from "@/assets/jardim-suculentas-topo.jpeg.asset.json";
+import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
+import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
+import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
+import velasConchaDetalhe from "@/assets/velas-concha-detalhe.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 
 export const Route = createFileRoute("/decoracao")({
@@ -24,7 +29,28 @@ export const Route = createFileRoute("/decoracao")({
   component: DecoracaoPage,
 });
 
-const pecas = ["Vasos", "Bandejas", "Centros de Mesa", "Esculturas"];
+const pecas = [
+  {
+    nome: "Jardim de Suculentas",
+    src: jardimSuculentas.url,
+    alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica verde",
+  },
+  {
+    nome: "Centro de Mesa",
+    src: jardimSuculentasTopo.url,
+    alt: "Vista de topo do jardim de suculentas em cera",
+  },
+  {
+    nome: "Bouquet de Rosas",
+    src: bouquetRosas.url,
+    alt: "Bouquet de velas em forma de rosas vermelhas num vaso coração",
+  },
+  {
+    nome: "Esculturas em Cera",
+    src: velasConchaDuo.url,
+    alt: "Velas escultóricas em forma de concha",
+  },
+];
 
 function DecoracaoPage() {
   return (
@@ -41,9 +67,14 @@ function DecoracaoPage() {
       <Section className="border-t border-border">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {pecas.map((peca) => (
-            <article key={peca}>
-              <ImagePlaceholder label={peca} />
-              <h2 className="mt-4 font-serif text-xl">{peca}</h2>
+            <article key={peca.nome}>
+              <img
+                src={peca.src}
+                alt={peca.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <h2 className="mt-4 font-serif text-xl">{peca.nome}</h2>
             </article>
           ))}
         </div>
@@ -67,8 +98,18 @@ function DecoracaoPage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <ImagePlaceholder label="Processo" ratio="aspect-square" />
-            <ImagePlaceholder label="Acabamento" ratio="aspect-square" />
+            <img
+              src={jardimSuculentasAmbiente.url}
+              alt="Jardim de suculentas em cera junto a plantas decorativas"
+              loading="lazy"
+              className="aspect-square w-full object-cover"
+            />
+            <img
+              src={velasConchaDetalhe.url}
+              alt="Detalhe do acabamento das velas em forma de concha"
+              loading="lazy"
+              className="aspect-square w-full object-cover"
+            />
           </div>
         </div>
       </Section>

@@ -10,7 +10,9 @@ import { Hand, Sparkles, Ruler } from "lucide-react";
 import logoCircular from "@/assets/logo-circular.asset.json";
 import testemunho1 from "@/assets/testemunho1.jpeg.asset.json";
 import testemunho2 from "@/assets/testemunho2.jpeg.asset.json";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
+import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
+import lembrancaEducadora from "@/assets/lembranca-educadora.jpeg.asset.json";
 import { Section, SectionHeading } from "@/components/Section";
 import { site } from "@/lib/site";
 
@@ -41,16 +43,22 @@ const destaques = [
     title: "Velas Aromáticas",
     text: "Cera vegetal e aromas selecionados, em recipientes escolhidos peça a peça.",
     to: "/velas" as const,
+    image: velaConchaAcesa.url,
+    alt: "Vela artesanal em forma de concha acesa num prato de vidro",
   },
   {
     title: "Peça Decorativa Personalizada",
     text: "Formas, cores e acabamentos pensados para o seu espaço.",
     to: "/decoracao" as const,
+    image: jardimSuculentas.url,
+    alt: "Jardim de suculentas em cera de coco e soja numa taça de cerâmica",
   },
   {
     title: "Lembranças de Evento",
     text: "Detalhes que ficam na memória dos seus convidados.",
     to: "/eventos" as const,
+    image: lembrancaEducadora.url,
+    alt: "Lembrança personalizada para educadora com vela em forma de flor",
   },
 ];
 
@@ -149,7 +157,12 @@ function Home() {
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {destaques.map((item) => (
             <article key={item.title}>
-              <ImagePlaceholder label={item.title} />
+              <img
+                src={item.image}
+                alt={item.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
               <h3 className="mt-5 font-serif text-2xl">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
               <Link

@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import bouquetRosas from "@/assets/bouquet-rosas.jpeg.asset.json";
+import velaConchaAcesa from "@/assets/vela-concha-acesa.jpeg.asset.json";
+import chaRevelacao from "@/assets/cha-revelacao.jpeg.asset.json";
+import lembrancaEducadora from "@/assets/lembranca-educadora.jpeg.asset.json";
+import jardimSuculentas from "@/assets/jardim-suculentas.jpeg.asset.json";
+import velasConchaDuo from "@/assets/velas-concha-duo.jpeg.asset.json";
+import jardimSuculentasAmbiente from "@/assets/jardim-suculentas-ambiente.jpeg.asset.json";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section, SectionHeading } from "@/components/Section";
 
@@ -25,7 +31,43 @@ export const Route = createFileRoute("/eventos")({
   component: EventosPage,
 });
 
-const ocasioes = ["Casamentos", "Batizados", "Chás de Bebé", "Outras Celebrações"];
+const ocasioes = [
+  {
+    nome: "Casamentos",
+    src: bouquetRosas.url,
+    alt: "Bouquet de velas em forma de rosas e escultura de mãos dadas em gesso",
+  },
+  {
+    nome: "Batizados",
+    src: velaConchaAcesa.url,
+    alt: "Vela artesanal em forma de concha acesa",
+  },
+  {
+    nome: "Chás de Bebé",
+    src: chaRevelacao.url,
+    alt: "Vela de chá revelação em frasco de vidro com tampa de bambu",
+  },
+  {
+    nome: "Outras Celebrações",
+    src: lembrancaEducadora.url,
+    alt: "Lembrança personalizada para educadora com vela em forma de margarida",
+  },
+];
+
+const portefolio = [
+  {
+    src: jardimSuculentas.url,
+    alt: "Jardim de suculentas em cera numa taça de cerâmica",
+  },
+  {
+    src: velasConchaDuo.url,
+    alt: "Duas velas em forma de concha apresentadas sobre livros",
+  },
+  {
+    src: jardimSuculentasAmbiente.url,
+    alt: "Jardim de suculentas em cera em ambiente decorado",
+  },
+];
 
 function EventosPage() {
   return (
@@ -42,9 +84,14 @@ function EventosPage() {
       <Section className="border-t border-border">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ocasioes.map((o) => (
-            <article key={o}>
-              <ImagePlaceholder label={o} />
-              <h2 className="mt-4 font-serif text-xl">{o}</h2>
+            <article key={o.nome}>
+              <img
+                src={o.src}
+                alt={o.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <h2 className="mt-4 font-serif text-xl">{o.nome}</h2>
             </article>
           ))}
         </div>
@@ -55,11 +102,17 @@ function EventosPage() {
           eyebrow="Portefólio"
           title="Apresentação e"
           script="embalagem"
-          description="Espaço reservado para fotografias de eventos realizados pelo atelier."
+          description="Alguns trabalhos criados no atelier, do conceito à apresentação final."
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {["Mesa de lembranças", "Embalagem individual", "Etiquetas personalizadas"].map((l) => (
-            <ImagePlaceholder key={l} label={l} ratio="aspect-[4/3]" />
+          {portefolio.map((img) => (
+            <img
+              key={img.src}
+              src={img.src}
+              alt={img.alt}
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
           ))}
         </div>
       </Section>
