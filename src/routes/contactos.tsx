@@ -23,6 +23,7 @@ export const Route = createFileRoute("/contactos")({
     ],
     links: [{ rel: "canonical", href: "/contactos" }],
   }),
+  staticData: { sitemap: true },
   component: ContactosPage,
 });
 

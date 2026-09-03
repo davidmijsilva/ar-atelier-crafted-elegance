@@ -22,6 +22,7 @@ export const Route = createFileRoute("/politica-privacidade")({
     ],
     links: [{ rel: "canonical", href: "/politica-privacidade" }],
   }),
+  staticData: { sitemap: false },
   component: PrivacidadePage,
 });
 

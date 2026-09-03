@@ -21,6 +21,7 @@ export const Route = createFileRoute("/sobre-nos")({
     ],
     links: [{ rel: "canonical", href: "/sobre-nos" }],
   }),
+  staticData: { sitemap: true },
   component: SobrePage,
 });
 
