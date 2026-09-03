@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Section } from "@/components/Section";
 import { site } from "@/lib/site";
@@ -69,6 +69,35 @@ function PrivacidadePage() {
             O envio dos formulários é processado pelo serviço Web3Forms, que encaminha a sua
             mensagem para o email do atelier. Não é criada qualquer conta nem armazenamos os seus
             dados numa base de dados deste website.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-2xl text-foreground">Fundamento e consentimento</h2>
+          <p className="mt-3">
+            O tratamento assenta no consentimento que nos dá ao assinalar, antes do envio do
+            formulário, a autorização para ser contactado para as finalidades acima identificadas,
+            bem como em diligências pré-contratuais quando solicita um orçamento. Pode retirar o
+            consentimento a qualquer momento, sem afetar a licitude do tratamento anterior.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-2xl text-foreground">Prazo de conservação</h2>
+          <p className="mt-3">
+            Os dados são conservados durante o tempo necessário para responder ao pedido e gerir a
+            encomenda e, quando exista faturação, pelos prazos legais aplicáveis.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-2xl text-foreground">Cookies</h2>
+          <p className="mt-3">
+            Este website não utiliza cookies de publicidade nem de análise. Detalhes na{" "}
+            <Link to="/politica-cookies" className="text-foreground underline">
+              Política de Cookies
+            </Link>
+            .
           </p>
         </section>
 
