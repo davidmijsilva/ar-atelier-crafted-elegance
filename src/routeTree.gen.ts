@@ -10,11 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
 import { Route as ContactosRouteImport } from './routes/contactos'
 import { Route as DecoracaoRouteImport } from './routes/decoracao'
 import { Route as EventosRouteImport } from './routes/eventos'
-import { Route as PoliticaCookiesRouteImport } from './routes/politica-cookies'
 import { Route as PoliticaPrivacidadeRouteImport } from './routes/politica-privacidade'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SobreNosRouteImport } from './routes/sobre-nos'
@@ -23,11 +21,6 @@ import { Route as VelasRouteImport } from './routes/velas'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AvisoLegalRoute = AvisoLegalRouteImport.update({
-  id: '/aviso-legal',
-  path: '/aviso-legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactosRoute = ContactosRouteImport.update({
@@ -43,11 +36,6 @@ const DecoracaoRoute = DecoracaoRouteImport.update({
 const EventosRoute = EventosRouteImport.update({
   id: '/eventos',
   path: '/eventos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliticaCookiesRoute = PoliticaCookiesRouteImport.update({
-  id: '/politica-cookies',
-  path: '/politica-cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliticaPrivacidadeRoute = PoliticaPrivacidadeRouteImport.update({
@@ -73,11 +61,9 @@ const VelasRoute = VelasRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/aviso-legal': typeof AvisoLegalRoute
   '/contactos': typeof ContactosRoute
   '/decoracao': typeof DecoracaoRoute
   '/eventos': typeof EventosRoute
-  '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidade': typeof PoliticaPrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -85,11 +71,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/aviso-legal': typeof AvisoLegalRoute
   '/contactos': typeof ContactosRoute
   '/decoracao': typeof DecoracaoRoute
   '/eventos': typeof EventosRoute
-  '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidade': typeof PoliticaPrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -98,11 +82,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/aviso-legal': typeof AvisoLegalRoute
   '/contactos': typeof ContactosRoute
   '/decoracao': typeof DecoracaoRoute
   '/eventos': typeof EventosRoute
-  '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidade': typeof PoliticaPrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -112,11 +94,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/aviso-legal'
     | '/contactos'
     | '/decoracao'
     | '/eventos'
-    | '/politica-cookies'
     | '/politica-privacidade'
     | '/sitemap.xml'
     | '/sobre-nos'
@@ -124,11 +104,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/aviso-legal'
     | '/contactos'
     | '/decoracao'
     | '/eventos'
-    | '/politica-cookies'
     | '/politica-privacidade'
     | '/sitemap.xml'
     | '/sobre-nos'
@@ -136,11 +114,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/aviso-legal'
     | '/contactos'
     | '/decoracao'
     | '/eventos'
-    | '/politica-cookies'
     | '/politica-privacidade'
     | '/sitemap.xml'
     | '/sobre-nos'
@@ -149,11 +125,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AvisoLegalRoute: typeof AvisoLegalRoute
   ContactosRoute: typeof ContactosRoute
   DecoracaoRoute: typeof DecoracaoRoute
   EventosRoute: typeof EventosRoute
-  PoliticaCookiesRoute: typeof PoliticaCookiesRoute
   PoliticaPrivacidadeRoute: typeof PoliticaPrivacidadeRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreNosRoute: typeof SobreNosRoute
@@ -167,13 +141,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/aviso-legal': {
-      id: '/aviso-legal'
-      path: '/aviso-legal'
-      fullPath: '/aviso-legal'
-      preLoaderRoute: typeof AvisoLegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contactos': {
@@ -195,13 +162,6 @@ declare module '@tanstack/react-router' {
       path: '/eventos'
       fullPath: '/eventos'
       preLoaderRoute: typeof EventosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/politica-cookies': {
-      id: '/politica-cookies'
-      path: '/politica-cookies'
-      fullPath: '/politica-cookies'
-      preLoaderRoute: typeof PoliticaCookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-privacidade': {
@@ -237,11 +197,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AvisoLegalRoute: AvisoLegalRoute,
   ContactosRoute: ContactosRoute,
   DecoracaoRoute: DecoracaoRoute,
   EventosRoute: EventosRoute,
-  PoliticaCookiesRoute: PoliticaCookiesRoute,
   PoliticaPrivacidadeRoute: PoliticaPrivacidadeRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreNosRoute: SobreNosRoute,

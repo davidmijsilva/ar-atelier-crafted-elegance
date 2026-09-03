@@ -37,12 +37,6 @@ function ContactosPage() {
         description="Escreva-nos com a sua ideia e responderemos com uma proposta personalizada."
       />
 
-      <p className="mx-auto mt-8 max-w-2xl border border-border bg-card px-5 py-4 text-center text-xs leading-relaxed text-muted-foreground">
-        O AR atelier trabalha <span className="text-foreground">apenas por encomenda</span> e de
-        forma digital: não temos loja online nem espaço físico aberto ao público. Todos os pedidos
-        são orçamentados individualmente por email, telefone ou WhatsApp.
-      </p>
-
       <div className="mt-14 grid gap-12 md:grid-cols-[1fr_0.8fr]">
         <QuoteForm
           subject="Novo pedido de contacto — Website AR atelier"
