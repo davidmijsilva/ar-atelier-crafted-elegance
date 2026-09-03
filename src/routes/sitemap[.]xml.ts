@@ -1,8 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { getRouter } from "@/router";
-import { sitemapStaticPaths, sitemapXML, type SitemapEntry } from "@/lib/sitemap";
+import { sitemapXML, type SitemapEntry } from "@/lib/sitemap";
 
 const BASE_URL = "https://ar-atelier-crafted-elegance.lovable.app";
+
+const PUBLIC_PATHS: SitemapEntry[] = [
+  { path: "/" },
+  { path: "/velas" },
+  { path: "/decoracao" },
+  { path: "/eventos" },
+  { path: "/sobre-nos" },
+  { path: "/contactos" },
+];
 
 export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },
@@ -15,12 +23,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             headers: { "Cache-Control": "no-store" },
           });
         }
-        const router = getRouter();
-        const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
-        if (entries.length === 0) {
-          return new Response(null, { status: 404, headers: { "Cache-Control": "no-store" } });
-        }
-        return new Response(sitemapXML(BASE_URL, entries), {
+        return new Response(sitemapXML(BASE_URL, PUBLIC_PATHS), {
           headers: { "Content-Type": "application/xml", "Cache-Control": "public, max-age=3600" },
         });
       },
