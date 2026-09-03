@@ -19,8 +19,13 @@ export function SiteFooter() {
             decoding="async"
           />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Velas, peças decorativas e lembranças personalizadas, feitas à mão em Lisboa. 
+            Velas, peças decorativas e lembranças personalizadas, feitas à mão em Lisboa. 
           </p>
+          <p className="mt-4 max-w-xs text-xs leading-relaxed text-muted-foreground">
+            Atelier a trabalhar por encomenda e de forma digital. Sem loja online e sem espaço
+            físico aberto ao público.
+          </p>
+          <LivroReclamacoesBadge className="mt-6 inline-block" />
         </div>
 
         <div>
