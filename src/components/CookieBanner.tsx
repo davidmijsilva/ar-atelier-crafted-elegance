@@ -31,7 +31,7 @@ export function CookieBanner() {
       aria-label="Informação sobre cookies"
       className="fixed inset-x-0 bottom-0 z-[60] border-t border-border bg-background/98 backdrop-blur"
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 pb-24 sm:flex-row sm:items-center sm:justify-between sm:pr-44 sm:pb-5">
         <p className="max-w-2xl text-xs leading-relaxed text-muted-foreground">
           Este website utiliza apenas armazenamento local estritamente necessário ao seu
           funcionamento (por exemplo, para guardar esta escolha). Não usamos cookies de publicidade
