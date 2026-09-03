@@ -1,4 +1,6 @@
 import { Link } from "@tanstack/react-router";
+
+import { LivroReclamacoesBadge } from "@/components/LivroReclamacoesBadge";
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 import logoLettering from "@/assets/logo-lettering.asset.json";
@@ -6,7 +8,7 @@ import { nav, site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-border bg-secondary/50">
+    <footer id="site-footer" className="mt-24 border-t border-border bg-secondary/50">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
         <div>
           <img
@@ -17,8 +19,13 @@ export function SiteFooter() {
             decoding="async"
           />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Velas, peças decorativas e lembranças personalizadas, feitas à mão em Lisboa. 
+            Velas, peças decorativas e lembranças personalizadas, feitas à mão em Lisboa. 
           </p>
+          <p className="mt-4 max-w-xs text-xs leading-relaxed text-muted-foreground">
+            Atelier a trabalhar por encomenda e de forma digital. Sem loja online e sem espaço
+            físico aberto ao público.
+          </p>
+          <LivroReclamacoesBadge className="mt-6 inline-block" />
         </div>
 
         <div>
@@ -76,6 +83,12 @@ export function SiteFooter() {
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <Link to="/politica-privacidade" className="hover:text-foreground">
               Política de Privacidade
+            </Link>
+            <Link to="/politica-cookies" className="hover:text-foreground">
+              Política de Cookies
+            </Link>
+            <Link to="/aviso-legal" className="hover:text-foreground">
+              Avisos Legais
             </Link>
             <a
               href={site.complaintsHref}
