@@ -18,6 +18,8 @@ export function SiteHeader() {
             className="h-12 w-12 shrink-0 rounded-full object-cover"
             width={48}
             height={48}
+            loading="eager"
+            decoding="async"
           />
           <span className="min-w-0">
             <span className="block truncate font-serif text-xl leading-none tracking-[0.18em]">
