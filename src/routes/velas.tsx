@@ -83,6 +83,7 @@ function VelasPage() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
+                  decoding="async"
                   className={`aspect-[3/4] w-full object-cover ${i === 1 ? "mt-8" : ""}`}
                 />
               ))}

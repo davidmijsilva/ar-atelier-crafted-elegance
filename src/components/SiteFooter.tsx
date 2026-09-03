@@ -14,6 +14,7 @@ export function SiteFooter() {
             alt="Logótipo AR atelier"
             className="h-20 w-auto mix-blend-multiply"
             loading="lazy"
+            decoding="async"
           />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Velas, peças decorativas e lembranças personalizadas, feitas à mão em Lisboa. 

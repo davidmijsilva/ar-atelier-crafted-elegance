@@ -142,6 +142,9 @@ function Home() {
               className="w-full max-w-md mix-blend-multiply"
               width={900}
               height={960}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
         </div>
@@ -161,6 +164,7 @@ function Home() {
                 src={item.image}
                 alt={item.alt}
                 loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
               <h3 className="mt-5 font-serif text-2xl">{item.title}</h3>
@@ -202,6 +206,7 @@ function Home() {
               alt="Testemunho de cliente: 'Adorei Ana, perfeito e com mto significado. Vou divulgar o teu trabalho.'"
               className="w-full"
               loading="lazy"
+              decoding="async"
             />
           </figure>
           <figure className="overflow-hidden rounded-sm border border-border bg-card p-2 shadow-sm">
@@ -210,6 +215,7 @@ function Home() {
               alt="Testemunho de cliente: 'A minha mãe adorou! Gostou tanto que diz que nem vai queimar as velas porque são demasiado bonitas.'"
               className="w-full"
               loading="lazy"
+              decoding="async"
             />
           </figure>
         </div>
