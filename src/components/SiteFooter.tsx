@@ -16,7 +16,7 @@ export function SiteFooter() {
             loading="lazy"
           />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Velas, peças decorativas e lembranças personalizadas, feitas à mão em Lisboa.
+            Velas, peças decorativas e lembranças personalizadas, feitas à mão em Lisboa. 
           </p>
         </div>
 
