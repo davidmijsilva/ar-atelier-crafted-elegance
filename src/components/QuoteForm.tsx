@@ -105,6 +105,7 @@ export function QuoteForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
+      <input type="hidden" name="subject" value={subject} />
 
       <Field label="Nome" name="nome" error={errors["nome"]} required />
       <Field label="Email" name="email" type="email" error={errors["email"]} required />

@@ -39,7 +39,7 @@ function ContactosPage() {
 
       <div className="mt-14 grid gap-12 md:grid-cols-[1fr_0.8fr]">
         <QuoteForm
-          subject="Novo pedido de contacto — Website AR atelier"
+          subject="Novo contacto recebido no site AR Atelier"
           tipos={[
             "Velas aromáticas",
             "Velas decorativas",
