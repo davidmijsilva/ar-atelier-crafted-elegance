@@ -83,6 +83,7 @@ function DecoracaoPage() {
                 src={peca.src}
                 alt={peca.alt}
                 loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
               <h2 className="mt-4 text-center font-serif text-xl">{peca.nome}</h2>
@@ -112,6 +113,7 @@ function DecoracaoPage() {
             src={jardimSuculentasAmbiente.url}
             alt="Jardim de suculentas em cera junto a plantas decorativas"
             loading="lazy"
+            decoding="async"
             className="aspect-[4/3] w-full object-cover"
           />
         </div>

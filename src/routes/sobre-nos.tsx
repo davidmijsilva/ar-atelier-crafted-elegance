@@ -41,6 +41,7 @@ function SobrePage() {
             alt="Fundadora do AR atelier"
             className="w-full object-cover"
             loading="lazy"
+            decoding="async"
           />
           <div>
             <p className="text-[0.68rem] tracking-brand text-muted-foreground">Sobre nós</p>

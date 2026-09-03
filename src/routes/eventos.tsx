@@ -100,6 +100,7 @@ function EventosPage() {
                 src={o.src}
                 alt={o.alt}
                 loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
               <h2 className="mt-4 text-center font-serif text-xl">{o.nome}</h2>
@@ -122,6 +123,7 @@ function EventosPage() {
                 src={o.src}
                 alt={o.alt}
                 loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
               <h2 className="mt-4 text-center font-serif text-xl">{o.nome}</h2>
