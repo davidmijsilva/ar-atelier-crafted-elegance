@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { z } from "zod";
 
@@ -27,6 +28,7 @@ export function QuoteForm({
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [errorMessage, setErrorMessage] = useState("");
+  const [consent, setConsent] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -147,6 +149,29 @@ export function QuoteForm({
           <p className="mt-1 text-xs text-destructive">{errors["mensagem"]}</p>
         ) : null}
       </div>
+
+      <div className="flex items-start gap-3 border border-border bg-secondary/40 p-4">
+        <input
+          id="consentimento"
+          name="consentimento"
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 size-4 shrink-0 accent-foreground"
+        />
+        <label htmlFor="consentimento" className="text-xs leading-relaxed text-muted-foreground">
+          Autorizo o AR atelier a tratar os dados que indiquei acima com a finalidade exclusiva de
+          responder ao meu pedido de informação ou de orçamento e de gerir uma eventual encomenda.
+          Declaro ter lido a{" "}
+          <Link to="/politica-privacidade" className="text-foreground underline">
+            Política de Privacidade
+          </Link>
+          .
+        </label>
+      </div>
+      {errors["consentimento"] ? (
+        <p className="-mt-3 text-xs text-destructive">{errors["consentimento"]}</p>
+      ) : null}
 
       {status === "error" ? (
         <p className="text-xs text-destructive">
