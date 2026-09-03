@@ -38,15 +38,21 @@ export function QuoteForm({
     if (data["website"]) return; // honeypot
 
     const parsed = baseSchema.safeParse(data);
+    const next: Record<string, string> = {};
     if (!parsed.success) {
-      const next: Record<string, string> = {};
       for (const issue of parsed.error.issues) {
         const key = String(issue.path[0]);
         if (!next[key]) next[key] = issue.message;
       }
+    }
+    if (!consent) {
+      next["consentimento"] = "É necessário autorizar o contacto para enviarmos o seu pedido.";
+    }
+    if (!parsed.success || Object.keys(next).length > 0) {
       setErrors(next);
       return;
     }
+
 
     setErrors({});
     setStatus("sending");
@@ -60,6 +66,7 @@ export function QuoteForm({
           from_name: "Website AR atelier",
           to: site.email,
           ...parsed.data,
+          consentimento_rgpd: `Sim — autorizou o contacto em ${new Date().toISOString()}`,
         }),
       });
       const result = (await response.json()) as { success?: boolean; message?: string };
