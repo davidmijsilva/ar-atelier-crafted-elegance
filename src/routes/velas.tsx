@@ -26,6 +26,7 @@ export const Route = createFileRoute("/velas")({
     ],
     links: [{ rel: "canonical", href: "/velas" }],
   }),
+  staticData: { sitemap: true },
   component: VelasPage,
 });
 

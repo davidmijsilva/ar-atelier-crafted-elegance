@@ -35,6 +35,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
+  staticData: { sitemap: true },
   component: Home,
 });
 

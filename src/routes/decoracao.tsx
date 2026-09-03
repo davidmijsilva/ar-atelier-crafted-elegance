@@ -27,6 +27,7 @@ export const Route = createFileRoute("/decoracao")({
     ],
     links: [{ rel: "canonical", href: "/decoracao" }],
   }),
+  staticData: { sitemap: true },
   component: DecoracaoPage,
 });
 
