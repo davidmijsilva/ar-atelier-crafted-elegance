@@ -74,6 +74,7 @@ export function QuoteForm({
         throw new Error(result.message ?? "Não foi possível enviar o pedido.");
       }
       form.reset();
+      setConsent(false);
       setStatus("success");
     } catch (error) {
       setErrorMessage(

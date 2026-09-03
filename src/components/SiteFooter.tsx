@@ -69,13 +69,16 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 pb-24 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:pb-6">
           <p>
             © {new Date().getFullYear()} AR atelier. Todos os direitos reservados.
           </p>
-          <div className="flex flex-wrap gap-x-5 gap-y-2">
+          <div className="flex flex-wrap gap-x-5 gap-y-2 sm:pr-44">
             <Link to="/politica-privacidade" className="hover:text-foreground">
               Política de Privacidade
+            </Link>
+            <Link to="/politica-cookies" className="hover:text-foreground">
+              Política de Cookies
             </Link>
             <a
               href={site.complaintsHref}
