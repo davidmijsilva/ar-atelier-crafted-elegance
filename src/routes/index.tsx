@@ -142,6 +142,9 @@ function Home() {
               className="w-full max-w-md mix-blend-multiply"
               width={900}
               height={960}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
         </div>
