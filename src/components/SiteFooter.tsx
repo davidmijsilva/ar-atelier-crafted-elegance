@@ -70,9 +70,22 @@ export function SiteFooter() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 pb-24 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:pb-6">
-          <p>
-            © {new Date().getFullYear()} AR atelier. Todos os direitos reservados.
-          </p>
+          <div>
+            <p>
+              © {new Date().getFullYear()} AR atelier. Todos os direitos reservados.
+            </p>
+            <p className="mt-1">
+              Criação de site por{" "}
+              <a
+                href="https://oteunegociodigital.pt"
+                target="_blank"
+                rel="noopener"
+                className="underline underline-offset-2 hover:text-foreground"
+              >
+                O teu negócio digital
+              </a>
+            </p>
+          </div>
           <div className="flex flex-wrap gap-x-5 gap-y-2 sm:pr-44">
             <Link to="/politica-privacidade" className="hover:text-foreground">
               Política de Privacidade
